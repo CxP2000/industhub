@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Page not found - IndustHub. The page you are looking for does not exist or has been moved." data-i18n-content="error_page.meta.description">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+<title data-i18n="error_page.meta.title">404 - Page Not Found | IndustHub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .error-section{min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;background:#0f172a;color:#fff;padding:6rem 2rem}
+  .error-code{font-size:clamp(6rem,15vw,10rem);font-weight:900;color:#f97316;line-height:1;margin-bottom:1rem;letter-spacing:-0.03em}
+  .error-title{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;margin-bottom:1rem}
+  .error-desc{color:#94a3b8;max-width:480px;margin:0 auto 2rem;font-size:0.95rem;line-height:1.7}
+  .error-links{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+  .error-links a{display:inline-flex;align-items:center;gap:0.5rem}
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav" data-i18n="common.skip">Skip to main content</a>
+
+<section class="error-section">
+  <span id="main-content" tabindex="-1"></span>
+  <div>
+    <div class="error-code">404</div>
+    <h1 class="error-title" data-i18n="error_page.title">Page Not Found</h1>
+    <p class="error-desc" data-i18n="error_page.text">The page you are looking for does not exist or has been moved. It may have been renamed, removed, or the URL may be mistyped.</p>
+    <div class="error-links">
+      <a href="index.html" class="btn btn-primary btn-lg" data-i18n="error_page.button1">Back to Home</a>
+      <a href="products/index.html" class="btn btn-outline-light btn-lg" data-i18n="error_page.button2">Browse Products</a>
+      <a href="contact.html" class="btn btn-outline-light btn-lg" data-i18n="error_page.button3">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<script>
+window.pageTranslations = Object.assign({}, window.pageTranslations, {
+  en: {
+    'error_page.meta.title': '404 - Page Not Found | IndustHub',
+    'error_page.meta.description': 'Page not found - IndustHub. The page you are looking for does not exist or has been moved.',
+    'error_page.title': 'Page Not Found',
+    'error_page.text': 'The page you are looking for does not exist or has been moved. It may have been renamed, removed, or the URL may be mistyped.',
+    'error_page.button1': 'Back to Home',
+    'error_page.button2': 'Browse Products',
+    'error_page.button3': 'Contact Us'
+  },
+  zh: {
+    'error_page.meta.title': '404 - 页面未找到 | IndustHub',
+    'error_page.meta.description': '页面未找到 - IndustHub。你访问的页面不存在，或已经被移动。',
+    'error_page.title': '页面未找到',
+    'error_page.text': '你访问的页面不存在，或已经被移动。它可能已被重命名、删除，或者链接地址输入有误。',
+    'error_page.button1': '返回首页',
+    'error_page.button2': '浏览产品',
+    'error_page.button3': '联系我们'
+  },
+  es: {
+    'error_page.meta.title': '404 - Pagina no encontrada | IndustHub',
+    'error_page.meta.description': 'Pagina no encontrada - IndustHub. La pagina que busca no existe o ha sido movida.',
+    'error_page.title': 'Pagina no encontrada',
+    'error_page.text': 'La pagina que busca no existe o ha sido movida. Puede haber sido renombrada, eliminada o la URL puede estar escrita de forma incorrecta.',
+    'error_page.button1': 'Volver al inicio',
+    'error_page.button2': 'Ver productos',
+    'error_page.button3': 'Contactenos'
+  }
+});
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

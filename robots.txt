@@ -1,0 +1,7 @@
+﻿User-agent: *
+Allow: /
+Sitemap: https://industhub.com/sitemap.xml
+
+# Disallow admin/private paths
+Disallow: /admin/
+Disallow: /assets/private/
