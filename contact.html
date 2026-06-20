@@ -60,6 +60,8 @@
         <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" placeholder="Your name" required></div>
         <div class="form-group"><label for="company">Company *</label><input type="text" id="company" placeholder="Your company name" required></div>
         <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" placeholder="you@company.com" required></div>
+        <div class="form-group"><label for="phone">Phone / WhatsApp</label><input type="text" id="phone" placeholder="+1 555 000 0000"></div>
+        <div class="form-group"><label for="country">Country / Region</label><input type="text" id="country" placeholder="United States, Germany, Mexico..."></div>
         <div class="form-group">
           <label for="interest">I am interested in *</label>
           <select id="interest" required>
@@ -87,13 +89,17 @@
         <div class="form-group"><label for="details">Key Technical Details</label><input type="text" id="details" placeholder="Example: M14x1.5 port, nitrogen, 8 bar, 15s cycle, 1x10^-3 mbar·L/s"></div>
         <div class="form-group"><label for="message">Tell us about your application *</label><textarea id="message" placeholder="Describe the part interface, media, pressure range, cycle time, cooling requirement, or leak-rate target. Include anything that helps us recommend the right route." required></textarea></div>
         <div class="form-group">
-          <label>Security Verification *</label>
-          <div style="background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;padding:1rem;display:flex;align-items:center;gap:1rem">
-            <span style="font-size:0.85rem;color:#64748b;">reCAPTCHA placeholder</span>
-            <span style="background:#0f172a;color:#94a3b8;padding:0.4rem 0.8rem;border-radius:4px;font-size:0.8rem;font-weight:600">I'm not a robot</span>
-            <span style="font-size:1.2rem">OK</span>
-          </div>
-          <small style="color:#94a3b8;font-size:0.78rem;display:block;margin-top:0.5rem">CAPTCHA will be activated when deployed to production server.</small>
+          <label for="timeline">Project Timeline</label>
+          <select id="timeline">
+            <option value="">Select timeline</option>
+            <option value="urgent">Urgent / active project</option>
+            <option value="1-3-months">Within 1-3 months</option>
+            <option value="planning">Planning or early evaluation</option>
+            <option value="replacement">Replacement or supplier comparison</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <small style="color:#64748b;font-size:0.82rem;line-height:1.6;display:block">After submission, your inquiry details will be prepared in an email so our team can review the application, product route, and next technical step.</small>
         </div>
         <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Submit Inquiry</button>
       </form>
