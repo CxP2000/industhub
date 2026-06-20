@@ -3,32 +3,27 @@
   <url><loc>https://industhub.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://industhub.com/products/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://industhub.com/products/seal-connectors/categories/cooling-water-pipes.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://industhub.com/products/seal-connectors/categories/fuel-pipes.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://industhub.com/products/seal-connectors/categories/threaded.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/applications/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/resources/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://industhub.com/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://industhub.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://industhub.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://industhub.com/products/seal-connectors/categories/cooling-water-pipes.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/products/seal-connectors/categories/flared-tubes.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/products/seal-connectors/categories/fuel-pipes.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/products/seal-connectors/categories/gas-cylinder-filling.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/products/seal-connectors/categories/liquid-cooling.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/products/seal-connectors/categories/male-female-quick.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/products/seal-connectors/categories/straight-tubes.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/products/seal-connectors/categories/threaded.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g10-cooling-water-pipe-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g10-pro-cooling-water-pipe-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g10d-cooling-water-pipe-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g15-fuel-pipe-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g15-pro-fuel-pipe-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g15k-fuel-pipe-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://industhub.com/products/seal-connectors/models/g60-external-thread-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://industhub.com/products/seal-connectors/models/g80-internal-thread-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://industhub.com/products/seal-connectors/models/g85-high-pressure-external-thread.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://industhub.com/products/leak-detectors/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://industhub.com/products/leak-detectors/models/l530-differential-electronic-regulator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://industhub.com/products/leak-detectors/models/l520-differential-manual-regulator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://industhub.com/products/leak-detectors/models/l330-direct-electronic-regulator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://industhub.com/products/leak-detectors/models/l320-direct-manual-regulator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://industhub.com/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://industhub.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://industhub.com/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://industhub.com/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://industhub.com/products/seal-connectors/categories/straight-tubes.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://industhub.com/products/seal-connectors/categories/flared-tubes.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://industhub.com/products/seal-connectors/categories/liquid-cooling.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://industhub.com/products/seal-connectors/categories/gas-cylinder-filling.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://industhub.com/products/seal-connectors/categories/male-female-quick.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g20a-liquid-cooling-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g20f-flat-face-liquid-cooling-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g25a-liquid-cooling-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -36,9 +31,29 @@
   <url><loc>https://industhub.com/products/seal-connectors/models/g30-straight-tube-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g35-straight-flared-tube-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g35c-compact-tube-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/products/seal-connectors/models/g60-external-thread-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g65-threaded-quick-seal-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g70-gas-cylinder-filling-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g70p-pneumatic-gas-cylinder-filling-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g72r-male-female-quick-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/products/seal-connectors/models/g80-internal-thread-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/products/seal-connectors/models/g85-high-pressure-external-thread.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://industhub.com/products/seal-connectors/models/g90-special-quick-connector.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/models/l320-direct-manual-regulator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/models/l330-direct-electronic-regulator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/models/l520-differential-manual-regulator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/models/l530-differential-electronic-regulator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/applications/automotive-ev.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/applications/battery-thermal.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/applications/gas-components.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/applications/hvac-appliances.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/applications/hydraulic-pneumatic.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/applications/medical-devices.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/applications/packaging-containers.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/applications/valves-industrial-parts.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/resources/direct-vs-differential-pressure-testing.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/resources/fixture-checklist.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/resources/leak-rate-basics.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/resources/pressure-decay-test-cycle.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://industhub.com/products/leak-detectors/resources/sensor-range-choice.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
 </urlset>
