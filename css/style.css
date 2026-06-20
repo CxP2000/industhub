@@ -508,6 +508,25 @@ img{max-width:100%;display:block}
 .catalog-focus-card p{font-size:0.95rem;color:#64748b;line-height:1.7;margin-bottom:1.2rem}
 .catalog-mini-tags{display:flex;flex-wrap:wrap;gap:0.55rem;margin-bottom:1.1rem}
 .catalog-mini-tags span{font-size:0.78rem;font-weight:600;color:#475569;background:#f8fafc;border:1px solid #e2e8f0;padding:0.35rem 0.7rem;border-radius:999px}
+.product-directory-section{background:#f8fafc}
+.product-directory-nav{position:sticky;top:96px;padding:1.25rem;border:1px solid #e2e8f0;border-radius:18px;background:#fff;box-shadow:0 18px 38px rgba(15,23,42,0.04)}
+.product-directory-nav h3{font-size:1rem;font-weight:850;color:#0f172a;margin-bottom:1rem}
+.product-directory-nav a{display:flex;align-items:center;gap:0.75rem;padding:0.8rem 0.85rem;border-radius:12px;color:#475569;font-size:0.9rem;font-weight:700;transition:background 0.2s ease,color 0.2s ease}
+.product-directory-nav a span{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:24px;border-radius:999px;background:#f1f5f9;color:#64748b;font-size:0.72rem;font-weight:900}
+.product-directory-nav a:hover,.product-directory-nav a.active{background:rgba(249,115,22,0.08);color:#0f172a}
+.product-directory-nav a:hover span,.product-directory-nav a.active span{background:#f97316;color:#fff}
+.product-directory-list{display:grid;gap:1.25rem}
+.product-directory-card{padding:1.5rem;border:1px solid #e2e8f0;border-radius:20px;background:#fff;box-shadow:0 18px 38px rgba(15,23,42,0.04)}
+.product-directory-card-muted{background:linear-gradient(180deg,#fff 0%,#fff7ed 100%);border-style:dashed}
+.product-directory-head{display:flex;justify-content:space-between;gap:1.5rem;align-items:flex-start;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid #e2e8f0}
+.product-directory-head h3{font-size:1.55rem;font-weight:900;color:#0f172a;letter-spacing:-0.03em;margin-bottom:0.45rem}
+.product-directory-head p{max-width:760px;color:#64748b;font-size:0.94rem;line-height:1.7;margin:0}
+.product-directory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.85rem}
+.product-directory-grid-compact{grid-template-columns:repeat(2,minmax(0,1fr))}
+.product-directory-grid a{display:block;padding:1rem 1rem 1.05rem;border:1px solid #e2e8f0;border-radius:14px;background:#f8fafc;transition:background 0.2s ease,border-color 0.2s ease,transform 0.2s ease}
+.product-directory-grid a:hover{background:#fff;border-color:#f97316;transform:translateY(-2px)}
+.product-directory-grid strong{display:block;color:#0f172a;font-size:0.95rem;margin-bottom:0.28rem}
+.product-directory-grid span{display:block;color:#64748b;font-size:0.84rem;line-height:1.55}
 .category-system-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.25rem}
 .category-system-grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .category-system-card{display:flex;flex-direction:column;min-height:100%;overflow:hidden;border:1px solid #e2e8f0;border-radius:18px;background:#fff;box-shadow:0 18px 38px rgba(15,23,42,0.04);transition:transform 0.3s ease,border-color 0.3s ease,box-shadow 0.3s ease}
@@ -550,6 +569,7 @@ img{max-width:100%;display:block}
   .catalog-row{grid-template-columns:180px 1fr}
   .catalog-focus-grid{grid-template-columns:1fr}
   .catalog-focus-grid-3{grid-template-columns:1fr}
+  .product-directory-nav{position:static}
   .category-system-grid,.category-system-grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
   .visual-family-grid{grid-template-columns:1fr}
 }
@@ -563,6 +583,10 @@ img{max-width:100%;display:block}
   .catalog-link{width:100%;min-height:auto;padding:0.15rem 0}
   .catalog-focus-card{padding:1.5rem}
   .catalog-focus-card h3{font-size:1.25rem}
+  .product-directory-card{padding:1.1rem;border-radius:16px}
+  .product-directory-head{display:block}
+  .product-directory-head .btn{margin-top:1rem}
+  .product-directory-grid,.product-directory-grid-compact{grid-template-columns:1fr}
   .category-system-grid,.category-system-grid-3{grid-template-columns:1fr}
   .visual-family-gallery-3{grid-template-columns:1fr}
   .visual-family-gallery-3 img,.visual-family-gallery-1 img{min-height:190px}
