@@ -55,9 +55,6 @@ img{max-width:100%;display:block}
 .nav-dropdown-menu a:hover{background:rgba(249,115,22,0.1);color:#fff}
 .nav-dropdown-menu strong{display:block;font-size:0.92rem;color:#fff;margin-bottom:0.18rem}
 .nav-dropdown-menu span{display:block;font-size:0.78rem;color:#94a3b8;line-height:1.35}
-.nav-language{display:flex;align-items:center}
-.lang-select{min-width:74px;padding:0.5rem 0.85rem;border-radius:999px;border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.06);color:#fff;font-size:0.82rem;font-weight:700;letter-spacing:0.04em;outline:none;cursor:pointer;appearance:none}
-.lang-select option{color:#0f172a;background:#fff}
 .mobile-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:101;border:0;box-shadow:none}
 .mobile-toggle:focus{box-shadow:none}
 .mobile-toggle span{display:block;width:26px;height:2px;background:#fff;border-radius:2px;transition:all 0.3s ease}
@@ -443,8 +440,6 @@ img{max-width:100%;display:block}
   .nav-dropdown-menu{position:static;transform:none;min-width:0;width:100%;margin-top:0.35rem;background:rgba(255,255,255,0.04);box-shadow:none;opacity:1;visibility:visible;pointer-events:auto;display:none}
   .nav-links.active .nav-dropdown-menu{display:block}
   .nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{transform:none}
-  .nav-language{width:100%;justify-content:center}
-  .lang-select{width:100%;max-width:180px;text-align:center}
   .mobile-toggle{display:flex}
   .hero h1{font-size:1.8rem}
   .hero-proof{grid-template-columns:1fr;margin-top:1.25rem}
