@@ -30,8 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
       productsNavLink.setAttribute('aria-haspopup', 'true');
       productsNavLink.setAttribute('aria-expanded', 'false');
       productsNavLink.innerHTML = '<span>Products</span><svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-      const base = productsNavLink.getAttribute('href') || 'products/index.html';
-      const prefix = base.indexOf('../') === 0 ? '../' : base.indexOf('../../') === 0 ? '../../' : '';
+      const homeNavLink = Array.from(document.querySelectorAll('.nav-links a')).find(function(link) {
+        return link.textContent.trim() === 'Home';
+      });
+      const homeHref = homeNavLink ? homeNavLink.getAttribute('href') || 'index.html' : 'index.html';
+      const prefix = homeHref.replace(/index\.html(?:[#?].*)?$/, '');
+      const base = prefix + 'products/index.html';
       const menu = document.createElement('div');
       menu.className = 'nav-dropdown-menu';
       menu.innerHTML = '<div class="nav-dropdown-kicker">Product Directory</div>' +
