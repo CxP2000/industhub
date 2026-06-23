@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    IndustHub - Precision Sealing & Connection Technology
    Color System: Dark #0f172a | Accent #f97316 | Slate #334155
    Design: Modern Precision / Minimalist / Technical Marketing
@@ -40,6 +40,21 @@ img{max-width:100%;display:block}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#f97316;transition:width 0.3s ease}
 .nav-links a:hover,.nav-links a.active{color:#fff}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-dropdown{position:relative}
+.nav-dropdown-toggle{display:inline-flex;align-items:center;gap:0.35rem}
+.nav-dropdown-chevron{transition:transform 0.2s ease}
+.nav-dropdown:hover .nav-dropdown-chevron,.nav-dropdown:focus-within .nav-dropdown-chevron{transform:rotate(180deg)}
+.nav-dropdown-toggle:before{content:"";position:absolute;left:0;right:0;top:100%;height:18px}
+.nav-dropdown-toggle:after{content:"";position:absolute;bottom:-4px;left:0;width:0;height:2px;background:#f97316;transition:width 0.3s ease}
+.nav-dropdown-toggle:focus:after{width:100%}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 18px);left:50%;transform:translate(-50%,8px);min-width:340px;padding:0.75rem;border:1px solid rgba(255,255,255,0.08);border-radius:16px;background:rgba(15,23,42,0.98);box-shadow:0 24px 60px rgba(0,0,0,0.32);opacity:0;visibility:hidden;pointer-events:none;transition:opacity 0.2s ease,transform 0.2s ease;z-index:150}
+.nav-dropdown-kicker{padding:0.35rem 0.95rem 0.65rem;color:#f97316;font-size:0.7rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase}
+.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0)}
+.nav-dropdown-menu a{display:block;padding:0.85rem 0.95rem;border-radius:12px;color:rgba(255,255,255,0.76);border-top:1px solid rgba(255,255,255,0.06)}
+.nav-dropdown-menu a:after{display:none}
+.nav-dropdown-menu a:hover{background:rgba(249,115,22,0.1);color:#fff}
+.nav-dropdown-menu strong{display:block;font-size:0.92rem;color:#fff;margin-bottom:0.18rem}
+.nav-dropdown-menu span{display:block;font-size:0.78rem;color:#94a3b8;line-height:1.35}
 .nav-language{display:flex;align-items:center}
 .lang-select{min-width:74px;padding:0.5rem 0.85rem;border-radius:999px;border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.06);color:#fff;font-size:0.82rem;font-weight:700;letter-spacing:0.04em;outline:none;cursor:pointer;appearance:none}
 .lang-select option{color:#0f172a;background:#fff}
@@ -118,6 +133,7 @@ img{max-width:100%;display:block}
 
 /* ========== PRODUCT CATEGORY CARDS ========== */
 .product-cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.product-cat-grid-3{grid-template-columns:repeat(3,1fr)}
 .product-cat-card{position:relative;border-radius:10px;overflow:hidden;background:#fff;border:1px solid #e2e8f0;transition:all 0.35s ease;display:flex;flex-direction:column;min-height:360px}
 .product-cat-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.12);border-color:#f97316}
 .product-cat-img{height:200px;background-size:cover;background-position:center;position:relative}
@@ -391,6 +407,7 @@ img{max-width:100%;display:block}
   .hero-visual-card-main{min-height:auto}
   .hero-proof{grid-template-columns:1fr 1fr}
   .product-cat-grid{grid-template-columns:repeat(2,1fr)}
+  .product-cat-grid-3{grid-template-columns:repeat(3,1fr)}
   .solution-lane-grid{grid-template-columns:repeat(2,1fr)}
   .scenario-grid{grid-template-columns:repeat(2,1fr)}
   .scenario-industry-bar{grid-template-columns:1fr}
@@ -422,6 +439,10 @@ img{max-width:100%;display:block}
   .hero-buttons .btn{width:100%;justify-content:center}
   .nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:rgba(15,23,42,0.98);backdrop-filter:blur(16px);flex-direction:column;padding:1.5rem 2rem;gap:1rem;border-bottom:1px solid rgba(255,255,255,0.06)}
   .nav-links.active{display:flex}
+  .nav-dropdown{width:100%}
+  .nav-dropdown-menu{position:static;transform:none;min-width:0;width:100%;margin-top:0.35rem;background:rgba(255,255,255,0.04);box-shadow:none;opacity:1;visibility:visible;pointer-events:auto;display:none}
+  .nav-links.active .nav-dropdown-menu{display:block}
+  .nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{transform:none}
   .nav-language{width:100%;justify-content:center}
   .lang-select{width:100%;max-width:180px;text-align:center}
   .mobile-toggle{display:flex}
@@ -436,6 +457,7 @@ img{max-width:100%;display:block}
   .trust-panel{padding:2rem 1.25rem}
   .trust-grid{grid-template-columns:1fr}
   .product-cat-grid{grid-template-columns:1fr}
+  .product-cat-grid-3{grid-template-columns:1fr}
   .solution-lane-grid{grid-template-columns:1fr}
   .scenario-grid{grid-template-columns:1fr}
   .scenario-industry-bar{padding:1.1rem}
@@ -593,3 +615,5 @@ img{max-width:100%;display:block}
   .visual-family-body{padding:1.25rem}
   .visual-family-body h3{font-size:1.18rem}
 }
+
+

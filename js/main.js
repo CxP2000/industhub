@@ -1,4 +1,4 @@
-// IndustHub - English static site interactions
+﻿// IndustHub - English static site interactions
 document.addEventListener('DOMContentLoaded', function() {
   const toggle = document.querySelector('.mobile-toggle');
   const navLinks = document.querySelector('.nav-links');
@@ -19,6 +19,36 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  const productsNavLink = Array.from(document.querySelectorAll('.nav-links a')).find(function(link) {
+    return link.textContent.trim() === 'Products';
+  });
+  if (productsNavLink && !productsNavLink.closest('.nav-dropdown')) {
+    const li = productsNavLink.parentElement;
+    if (li) {
+      li.classList.add('nav-dropdown');
+      productsNavLink.classList.add('nav-dropdown-toggle');
+      productsNavLink.setAttribute('aria-haspopup', 'true');
+      productsNavLink.setAttribute('aria-expanded', 'false');
+      productsNavLink.innerHTML = '<span>Products</span><svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      const base = productsNavLink.getAttribute('href') || 'products/index.html';
+      const prefix = base.indexOf('../') === 0 ? '../' : base.indexOf('../../') === 0 ? '../../' : '';
+      const menu = document.createElement('div');
+      menu.className = 'nav-dropdown-menu';
+      menu.innerHTML = '<div class="nav-dropdown-kicker">Product Directory</div>' +
+        '<a href="' + base + '"><strong>All Products</strong><span>Browse the full product center</span></a>' +
+        '<a href="' + prefix + 'products/seal-connectors/index.html"><strong>Quick Seal Connectors</strong><span>Threads, tubes, filling, evacuation, cooling</span></a>' +
+        '<a href="' + prefix + 'products/leak-detectors/index.html"><strong>Leak Detection Systems</strong><span>L320, L330, L520, L530 leak testers</span></a>' +
+        '<a href="' + prefix + 'products/seal-connectors/categories/liquid-cooling.html"><strong>Liquid Cooling Connectors</strong><span>Cooling loop and service connectors</span></a>' +
+        '<a href="' + prefix + 'contact.html"><strong>Coding / Marking Inquiry</strong><span>Reserved route for future equipment lines</span></a>';
+      li.appendChild(menu);
+      li.addEventListener('mouseenter', function() { productsNavLink.setAttribute('aria-expanded', 'true'); });
+      li.addEventListener('mouseleave', function() { productsNavLink.setAttribute('aria-expanded', 'false'); });
+      productsNavLink.addEventListener('focus', function() { productsNavLink.setAttribute('aria-expanded', 'true'); });
+      menu.addEventListener('focusout', function(e) {
+        if (!li.contains(e.relatedTarget)) productsNavLink.setAttribute('aria-expanded', 'false');
+      });
+    }
+  }
   const navbar = document.querySelector('.navbar');
   if (navbar) {
     window.addEventListener('scroll', function() {
@@ -202,3 +232,4 @@ document.addEventListener('DOMContentLoaded', function() {
   if (accept) accept.addEventListener('click', function() { closeBanner('accepted'); });
   if (deny) deny.addEventListener('click', function() { closeBanner('denied'); });
 })();
+
