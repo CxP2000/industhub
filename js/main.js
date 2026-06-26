@@ -20,25 +20,34 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   const productsNavLink = Array.from(document.querySelectorAll('.nav-links a')).find(function(link) {
-    return link.textContent.trim() === 'Products';
+    const text = link.textContent.trim();
+    return text === 'Products' || text === '产品';
   });
   if (productsNavLink && !productsNavLink.closest('.nav-dropdown')) {
     const li = productsNavLink.parentElement;
     if (li) {
+      const isChineseNav = document.documentElement.lang && document.documentElement.lang.toLowerCase().indexOf('zh') === 0;
       li.classList.add('nav-dropdown');
       productsNavLink.classList.add('nav-dropdown-toggle');
       productsNavLink.setAttribute('aria-haspopup', 'true');
       productsNavLink.setAttribute('aria-expanded', 'false');
-      productsNavLink.innerHTML = '<span>Products</span><svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      productsNavLink.innerHTML = '<span>' + (isChineseNav ? '产品' : 'Products') + '</span><svg class="nav-dropdown-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
       const homeNavLink = Array.from(document.querySelectorAll('.nav-links a')).find(function(link) {
-        return link.textContent.trim() === 'Home';
+        const text = link.textContent.trim();
+        return text === 'Home' || text === '首页';
       });
       const homeHref = homeNavLink ? homeNavLink.getAttribute('href') || 'index.html' : 'index.html';
       const prefix = homeHref.replace(/index\.html(?:[#?].*)?$/, '');
       const base = prefix + 'products/index.html';
       const menu = document.createElement('div');
       menu.className = 'nav-dropdown-menu';
-      menu.innerHTML = '<div class="nav-dropdown-kicker">Product Directory</div>' +
+      menu.innerHTML = isChineseNav ? '<div class="nav-dropdown-kicker">产品目录</div>' +
+        '<a href="' + base + '"><strong>全部产品</strong><span>浏览完整产品中心</span></a>' +
+        '<a href="' + prefix + 'products/seal-connectors/index.html"><strong>快速密封连接器</strong><span>螺纹、管口、充注、抽真空、液冷</span></a>' +
+        '<a href="' + prefix + 'products/leak-detectors/index.html"><strong>检漏仪系统</strong><span>L320、L330、L520、L530 标准机型</span></a>' +
+        '<a href="' + prefix + 'products/seal-connectors/categories/liquid-cooling.html"><strong>液冷接头</strong><span>冷却回路和维护连接方案</span></a>' +
+        '<a href="' + prefix + 'contact.html"><strong>喷码 / 标识询盘</strong><span>为后续设备线预留入口</span></a>' :
+        '<div class="nav-dropdown-kicker">Product Directory</div>' +
         '<a href="' + base + '"><strong>All Products</strong><span>Browse the full product center</span></a>' +
         '<a href="' + prefix + 'products/seal-connectors/index.html"><strong>Quick Seal Connectors</strong><span>Threads, tubes, filling, evacuation, cooling</span></a>' +
         '<a href="' + prefix + 'products/leak-detectors/index.html"><strong>Leak Detection Systems</strong><span>L320, L330, L520, L530 leak testers</span></a>' +
@@ -53,6 +62,40 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   }
+
+  if (navLinks && !navLinks.querySelector('.nav-lang-link')) {
+    const homeNavLink = Array.from(document.querySelectorAll('.nav-links a')).find(function(link) {
+      return link.textContent.trim() === 'Home' || link.textContent.trim() === '首页';
+    });
+    const isChinesePage = document.documentElement.lang && document.documentElement.lang.toLowerCase().indexOf('zh') === 0;
+    const homeHref = homeNavLink ? homeNavLink.getAttribute('href') || 'index.html' : 'index.html';
+    const rootPrefix = homeHref.replace(/index\.html(?:[#?].*)?$/, '');
+    const pathParts = window.location.pathname.replace(/\\/g, '/').split('/').filter(Boolean);
+    const depth = (homeHref.match(/\.\.\//g) || []).length;
+    const relParts = pathParts.slice(-(depth + 1));
+    const currentRelativePath = relParts.length ? relParts.join('/') : 'index.html';
+    let targetHref = rootPrefix + 'zh/' + currentRelativePath;
+    if (isChinesePage) {
+      const zhIndex = pathParts.lastIndexOf('zh');
+      const zhRelParts = zhIndex >= 0 ? pathParts.slice(zhIndex + 1) : ['index.html'];
+      const zhRelativePath = zhRelParts.length ? zhRelParts.join('/') : 'index.html';
+      const upToEnglishRoot = '../'.repeat(Math.max(1, zhRelParts.length));
+      targetHref = upToEnglishRoot + zhRelativePath;
+    }
+    const li = document.createElement('li');
+    const langLink = document.createElement('a');
+    langLink.className = 'nav-lang-link';
+    langLink.href = targetHref;
+    langLink.textContent = isChinesePage ? 'EN' : '中文';
+    li.appendChild(langLink);
+    const quoteItem = navLinks.querySelector('.btn') ? navLinks.querySelector('.btn').closest('li') : null;
+    if (quoteItem) {
+      navLinks.insertBefore(li, quoteItem);
+    } else {
+      navLinks.appendChild(li);
+    }
+  }
+
   const navbar = document.querySelector('.navbar');
   if (navbar) {
     window.addEventListener('scroll', function() {
@@ -142,6 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
+    const isChineseForm = document.documentElement.lang && document.documentElement.lang.toLowerCase().indexOf('zh') === 0;
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
       if (!contactForm.checkValidity()) {
@@ -174,8 +218,25 @@ document.addEventListener('DOMContentLoaded', function() {
         page: window.location.href
       };
 
-      const subject = 'IndustHub Inquiry - ' + (inquiry.company || inquiry.name || 'Website Visitor');
-      const bodyLines = [
+      const subject = 'IndustHub Inquiry - ' + (inquiry.company || inquiry.name || (isChineseForm ? '网站访客' : 'Website Visitor'));
+      const bodyLines = isChineseForm ? [
+        '来自 IndustHub 网站的新询盘',
+        '',
+        '姓名: ' + inquiry.name,
+        '公司: ' + inquiry.company,
+        '邮箱: ' + inquiry.email,
+        '电话 / WhatsApp: ' + (inquiry.phone || '未填写'),
+        '国家 / 地区: ' + (inquiry.country || '未填写'),
+        '感兴趣的产品: ' + inquiry.interest,
+        '应用方向: ' + (inquiry.application || '未填写'),
+        '项目时间: ' + (inquiry.timeline || '未填写'),
+        '技术信息: ' + (inquiry.details || '未填写'),
+        '',
+        '留言:',
+        inquiry.message,
+        '',
+        '来源页面: ' + inquiry.page
+      ] : [
         'New inquiry from IndustHub website',
         '',
         'Name: ' + inquiry.name,
@@ -197,17 +258,17 @@ document.addEventListener('DOMContentLoaded', function() {
       const mailto = 'mailto:sales@industhub.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 
       if (btn) {
-        btn.textContent = 'Preparing email...';
+        btn.textContent = isChineseForm ? '正在准备邮件...' : 'Preparing email...';
         btn.disabled = true;
       }
       window.location.href = mailto;
 
       contactForm.innerHTML = '<div class="form-success active">' +
         '<div class="form-success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div>' +
-        '<h3>Inquiry Prepared</h3>' +
-        '<p>Your email client should open with the inquiry ready to send. If it does not open, copy the inquiry summary below and email it to sales@industhub.com.</p>' +
+        '<h3>' + (isChineseForm ? '询盘已准备' : 'Inquiry Prepared') + '</h3>' +
+        '<p>' + (isChineseForm ? '你的邮件客户端应该会打开并生成询盘内容。如果没有打开，请复制下面的询盘信息并发送到 sales@industhub.com。' : 'Your email client should open with the inquiry ready to send. If it does not open, copy the inquiry summary below and email it to sales@industhub.com.') + '</p>' +
         '<textarea class="inquiry-copy" readonly>' + body.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</textarea>' +
-        '<a class="btn btn-primary btn-lg" href="' + mailto + '">Open Email Again</a>' +
+        '<a class="btn btn-primary btn-lg" href="' + mailto + '">' + (isChineseForm ? '再次打开邮件' : 'Open Email Again') + '</a>' +
         '</div>';
     });
   }

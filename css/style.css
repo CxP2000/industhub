@@ -55,6 +55,9 @@ img{max-width:100%;display:block}
 .nav-dropdown-menu a:hover{background:rgba(249,115,22,0.1);color:#fff}
 .nav-dropdown-menu strong{display:block;font-size:0.92rem;color:#fff;margin-bottom:0.18rem}
 .nav-dropdown-menu span{display:block;font-size:0.78rem;color:#94a3b8;line-height:1.35}
+.nav-lang-link{display:inline-flex;align-items:center;justify-content:center;min-width:54px;padding:0.42rem 0.75rem;border:1px solid rgba(255,255,255,0.16);border-radius:999px;background:rgba(255,255,255,0.06);font-weight:800!important;font-size:0.78rem!important;letter-spacing:0.04em;color:#fff!important}
+.nav-lang-link:after{display:none}
+.nav-lang-link:hover{border-color:rgba(249,115,22,0.65);background:rgba(249,115,22,0.12)}
 .mobile-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;z-index:101;border:0;box-shadow:none}
 .mobile-toggle:focus{box-shadow:none}
 .mobile-toggle span{display:block;width:26px;height:2px;background:#fff;border-radius:2px;transition:all 0.3s ease}
