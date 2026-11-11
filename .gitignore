@@ -1,0 +1,41 @@
+# Local backups and archives
+_versions/
+*.zip
+
+# One-click push helpers (local Windows convenience, not part of the site)
+push-to-github.bat
+push-diagnose.bat
+push-log.txt
+
+# Development workspace: only the shared content toolchain is versioned.
+# Everything else in _dev (screenshots, drafts, trash, backups) stays local.
+_dev/*
+!_dev/fix-scripts/
+_dev/fix-scripts/*
+!_dev/fix-scripts/gen_en_site.py
+!_dev/fix-scripts/en_translations.py
+!_dev/fix-scripts/en_translations_core.py
+!_dev/fix-scripts/en_translations_rows.py
+!_dev/fix-scripts/en_translations_rows2.py
+!_dev/fix-scripts/sync_resources.py
+!_dev/fix-scripts/tighten_product_images.py
+!_dev/fix-scripts/build_delivery_zip.py
+!_dev/en_worklist.tsv
+_dev/fix-scripts/__pycache__/
+
+# Local-only project data, not part of the deployed site
+.workbuddy/
+wordpress-theme/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+.tmp-extract/
